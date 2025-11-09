@@ -1,14 +1,574 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>跳转到首页</title>
-    <script>
-        // 自动跳转到首页
-        window.location.href = "/albb666/shouye/index.html";
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iconfont-阿里巴巴矢量图标库</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <p>如果页面没有自动跳转，请 <a href="/albb666/shouye/index.html">点击这里</a>。</p>
+
+    <div class="header-saver"></div>
+        
+    <div class="shoppingcar">
+        <div class="car-header">
+            <div class="car-header-btn">〉</div>
+            <div class="car-header-content">
+                <img class="sh-car" src="/albb666/shouye/imgs/shoppingcar.png" alt="shoppingcar" width="70">
+                <span class="car-header-text">
+                    ⚗ 清空购物车
+                </span>
+            </div>
+        </div>
+
+        <div class="car-icon-container">
+            <div class="no-result">
+                <img src="/albb666/shouye/imgs/空购物车.jpeg" alt="购物车为空" width="210">
+            </div>
+        </div>
+
+        <div class="car-bottom">
+            <div class="car-b-1"><span>添加至项目</span></div>
+            <div class="car-b-1"><span>下载素材</span></div>
+            <div class="car-b-1"><span>下载代码</span></div>
+            <div class="car-b-2"><span>AI 统一图标风格</span></div>
+        </div>
+
+    </div>
+
+    <div id="car-wrapper"></div>
+    
+    <div id="container">
+
+        <div class="header-container">
+            <div class="header" style="background-color: black;">
+                <div class="left">
+
+                    <div class="img-box1">
+                    <span>
+                    <img src="/albb666/shouye/imgs/icon1.png" alt="网站logo图片" style="height: 38px;">
+                    </span>
+                    </div>
+
+                    <div class="header-box1">
+                    <div class="box one" style="background-color: #FFFFFF1A;"><span class="box-text">首页</span></div>
+                    <div class="box two"><span>素材库</span></div>
+                    <div class="box three"><span>资源管理</span></div>
+                    <div class="box four"> <span>活动</span></div>
+                    <div class="box five">
+                        <span>AI 工具</span>
+                        <img src="/albb666/shouye/imgs/aiicon.png" alt="万象营造">
+                    </div>
+                    <div class="box six"><span>帮助</span></div>
+                    </div>
+                </div>
+
+
+                <div class="right">
+                    <ul class="right-list">
+                        <li class="li1"><img class="li1-icon" src="/albb666/shouye/imgs/upload.png" alt="upload" width="28"></li>
+                        <li class="li1"><img class="li1-icon" src="/albb666/shouye/imgs/中英文切换-显示英文.png" alt="ENG" width="29"></li>
+                        <li class="li1"><img class="li1-icon spcars" src="/albb666/shouye/imgs/shoppingcar.png" alt="shoppingcar" width="26"></li>
+                        <li class="li1"><img class="li1-icon" src="/albb666/shouye/imgs/notice.png" alt="notice" width="26"></li>
+                        <li class="li1"><img src="/albb666/shouye/imgs/selfpicture.png" alt="selfpicture" width="26"></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="bg-img-container">
+            <img src="/albb666/shouye/imgs/background/bg1.jpg" width="610" height="950">
+            <img src="/albb666/shouye/imgs/background/bg2.jpg" width="950" height="960">
+        </div>
+        
+
+
+        <div class="title">
+            <span>
+                <img src="/albb666/shouye/imgs/aiwuxian.png" alt="可变素材,ai无限" width="390">
+                <div><p style="font-size: 20px; margin-top: 14px;">从素材到 AI 工具，轻松做设计</p></div>
+            </span>
+        </div>
+
+
+        <div class="search-container">
+        <div class="search">
+            <div class="search-box">
+             <span class="search-type active" onclick="switchTab(this)"><span>搜索</span></span>
+             <span class="search-type" onclick="switchTab(this)"><span>AI 生成图标</span></span>
+            </div>
+
+            <div class="img-container">
+                <img src="/albb666/shouye/imgs/search.png" width="1100">
+                <div class="box1"><span>图标</span><span class="fold" style="color: #bfbfbf98;">﹀</span></div>
+                <span class="box2"><img src="/albb666/shouye/imgs/搜索.png" alt="notice" width="32"></span>
+                <div class="search-input-box">
+                    <input type="text" class="search-input">
+                    <div class="search-input-cover">
+                        <div class="search-input-cover-grey">请输入图标关键词</div>
+                        <div class="search-input-cover-text">
+                            <span class="search-input-cover-grey">,在</span>
+                            <span class="search-num">31,898,366</span>
+                            <span class="search-input-cover-grey">个图标中搜索</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="side-column">
+            <div class="fankui"><img src="/albb666/shouye/imgs/yonghufankui.png" width="75"></div>
+            <div class="side-buttons">
+                <div class="side-btn spcars"><img class="side-btn-icon" src="/albb666/shouye/imgs/cebianlan/购物车 (1).png" width="33"></div>
+                <div class="side-btn"><img class="side-btn-icon" src="/albb666/shouye/imgs/cebianlan/messages.png" width="31"></div>
+                <a class="side-btn" href="#container"><img class="side-btn-icon" src="/albb666/shouye/imgs/cebianlan/回到顶部 (2).png" width="31"></a>
+            </div>
+        </div>
+
+        
+
+
+        <div class="cards">
+            <ul class="cards-ul1">
+                <li class="class-li1">
+                    <button type="button" class="btn1 hover"><img src="/albb666/shouye/imgs/图标库.png" width="45px"></button>
+                    <p class="btn-name">图标库</p>
+                </li>
+                <li class="class-li1">
+                    <button type="button" class="btn1"><img src="/albb666/shouye/imgs/chahuaku.png" width="50px"></button>
+                    <p class="btn-name">矢量插画库</p>
+                </li>
+                <li class="class-li1">
+                    <button type="button" class="btn1"><img src="/albb666/shouye/imgs/zhengfangti.png" width="45px"></button>
+                    <p class="btn-name">3D插画库</p>
+                </li>
+                <li class="class-li1">
+                    <button type="button" class="btn1"><img src="/albb666/shouye/imgs/kaiqidongxiao.png" width="45px"></button>
+                    <p class="btn-name">动效库</p>
+                </li>
+                <li class="class-li1">
+                    <button type="button" class="btn1"><img src="/albb666/shouye/imgs/zitiku.png" width="40px"></button>
+                    <p class="btn-name">字体库</p>
+                </li>
+            </ul>
+
+            <ul class="cards-ul2">
+                <li class="cards-li2">
+                    <a class="cards-samples s active" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/s1.jpeg"></a>
+                    <a class="cards-samples t" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/t1.jpeg"></a>
+                    <a class="cards-samples u" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/u1.jpeg"></a>
+                    <a class="cards-samples v" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/v1.jpeg"></a>
+                    <a class="cards-samples w" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/w1.jpeg"></a>
+                </li>
+                <li class="cards-li2">
+                    <a class="cards-samples s active" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/s2.jpeg"></a>
+                    <a class="cards-samples t" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/t2.jpeg"></a>
+                    <a class="cards-samples u" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/u2.jpeg"></a>
+                    <a class="cards-samples v" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/v2.jpeg"></a>
+                    <a class="cards-samples w" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/w2.jpeg"></a>
+                </li>
+                <li class="cards-li2">
+                    <a class="cards-samples s active" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/s3.jpeg"></a>
+                    <a class="cards-samples t" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/t3.jpeg"></a>
+                    <a class="cards-samples u" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/u3.jpeg"></a>
+                    <a class="cards-samples v" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/v3.jpeg"></a>
+                    <da class="cards-samples w" href="/albb666/xiangqing/detail.html"><img src="/albb666/shouye/imgs/samples/w3.jpeg"></da>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="AItitle1"><p>AI 图标一键生成</p></div>
+
+        <div class="AItubiao">
+            <span class="tubiao-container">
+                <img src="/albb666/shouye/imgs/AI tubiao/xianqiao.png" width="270">
+                <p class="tubiao-p">纤巧线性风格</p>
+            </span>
+
+            <span class="tubiao-container">
+                <img src="/albb666/shouye/imgs/AI tubiao/changgui.png" width="270">
+                <p class="tubiao-p">常规线性风格</p>
+            </span>
+
+            <span class="tubiao-container">
+                <img src="/albb666/shouye/imgs/AI tubiao/hunhou.png" width="270">
+                <p class="tubiao-p">浑厚线性风格</p>
+            </span>
+
+            <span class="tubiao-container">
+                <img src="/albb666/shouye/imgs/AI tubiao/jianyue.png" width="270">
+                <p class="tubiao-p">简约面性风格</p>
+            </span>
+
+            <span class="tubiao-container">
+                <img src="/albb666/shouye/imgs/AI tubiao/gengduo.png" width="270">
+                <span class="tubiao-p-more">
+                    <p>更多风格</p>
+                    <p>即将上线</p>
+                </span>
+            </span>
+        </div>
+
+
+        <div class="AItitle2"><p>AI 工具重磅上新</p></div>
+
+        <div class="AIgongju">
+            <ui class="AIgongju-list">
+                <li>
+                    <div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI1.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>AI 生成图标</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI2.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>魔法卡片</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI3.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>智能抠图</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI4.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>尺寸魔方</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI5.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>高清放大</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI6.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>商品图</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI7.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>服饰图</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI8.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>智能试衣</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI9.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>解说视频</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI10.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>标题文案</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI11.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>导购文案</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI12.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>AI 证件照</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI13.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>AI 消除</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI14.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>AI 替换</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI15.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>商品笔记</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples">
+                        <div class="video-container">
+                            <video class="hover-video" src="/albb666/shouye/vedios/AI16.mp4" loop muted></video>
+                            <div class="fugai"></div>
+                            <div class="floating-text"><p>AI 服饰套图</p></div>
+                        </div>
+                    </div>
+                </li>
+                <li><div class="AIgongju-samples"><img class="GENGDUOAI" src="/albb666/shouye/imgs/gengduo.png"></div></li>
+            </ui>
+
+        </div>
+
+
+        <div class="zuixinxiaoxi"><p>最新消息</p></div>
+
+        <div>
+            <ul class="zuixinxiaoxi-list">
+                <li><div class="zuixinxiaoxi-samples"><img src="/albb666/shouye/imgs/samples/z1.jpeg"></div></li>
+                <li><div class="zuixinxiaoxi-samples"><img src="/albb666/shouye/imgs/samples/z2.jpeg"></div></li>
+                <li><div class="zuixinxiaoxi-samples"><img src="/albb666/shouye/imgs/samples/z3.jpeg"></div></li>
+                <li><div class="zuixinxiaoxi-samples"><img src="/albb666/shouye/imgs/samples/z4.jpeg"></div></li>
+            </ul>
+        </div>
+
+
+        <h2 class="intro-title">让设计更简单专业的素材平台</h2>
+        <h3 class="intro-subtitle">iconfont 帮助你整理、创作与协作</h3>
+
+
+        <div class="intro">
+            <div class="choose">
+                <ul class="choises">
+                    <li class="choise"><span class="box3 active" onclick="chooseTab(this,0)">使用指南</span></li>
+                    <li class="choise"><span class="box3" onclick="chooseTab(this,1)">素材资产</span></li>
+                </ul>
+            </div>
+            
+            <div class="intro-content tab1 active">
+                <div class="intro-content-left">
+                    <ul class="function-choise">
+                        <li>
+                            <div class="function-titles" onclick="introTab(this,0)">
+                                <div class="function-titles-main">
+                                    <span class="function-titles-main-text active">素材在线编辑</span>
+                                    <img class="function-titles-main-arrow active" src="/albb666/shouye/imgs/arrow.png" width="28"></img>
+                                </div>
+                                <div class="intro-text active">图标分路径改色，插画分图层编辑，3D模型自由变换，轻松定制设计</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="function-titles" onclick="introTab(this,1)">
+                                <div class="function-titles-main">
+                                    <span class="function-titles-main-text">语义搜索图标</span>
+                                    <img class="function-titles-main-arrow" src="/albb666/shouye/imgs/arrow.png" width="28"></img>
+                                </div>
+                                <div class="intro-text">描述图标即可找到，支持中文 、英文、拼音无缝互译，轻松获取所需</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="function-titles" onclick="introTab(this,2)">
+                                <div class="function-titles-main">
+                                    <span class="function-titles-main-text">可变字体</span>
+                                    <img class="function-titles-main-arrow" src="/albb666/shouye/imgs/arrow.png" width="28"></img>
+                                </div>
+                                <div class="intro-text">在线调节字号、字重、字宽等，提供高性能的字体子集化服务，实现网页字体的秒加载</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="function-titles" onclick="introTab(this,3)">
+                                <div class="function-titles-main">
+                                    <span class="function-titles-main-text">支持彩色字体图标</span>
+                                    <img class="function-titles-main-arrow" src="/albb666/shouye/imgs/arrow.png" width="28"></img>
+                                </div>
+                                <div class="intro-text">支持彩色字体图标的生产管理平台，让图标体积更小、渲染更快，适用场景更广</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="function-titles" onclick="introTab(this,4)">
+                                <div class="function-titles-main">
+                                    <span class="function-titles-main-text">图标一体化解决方案</span>
+                                    <img class="function-titles-main-arrow" src="/albb666/shouye/imgs/arrow.png" width="28"></img>
+                                </div>
+                                <div class="intro-text">轻松上传设计素材，支持项目共享与管理，项目成员下载图标，前端快捷调用代码
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="intro-content-right">
+                    <video class="intro-img active" src="/albb666/shouye/imgs/video/y8oc5 (1).webm" width="550" autoplay muted loop></video>
+                    <img class="intro-img" src="/albb666/shouye/imgs/intro-img/intro-img2.png" width="670">
+                    <video class="intro-img" src="/albb666/shouye/imgs/video/d10cg.webm" width="550" autoplay muted loop></video>
+                    <img class="intro-img" src="/albb666/shouye/imgs/intro-img/intro-img4.png" width="670">
+                    <img class="intro-img" src="/albb666/shouye/imgs/intro-img/intro-img5.png" width="670">
+                 </div>
+             </div>
+
+             <div class="intro-content tab2">
+                <div class="intro-content-left">
+                    <ul class="function-choise">
+                        <li>
+                            <div class="function-titles" onclick="introTab(this,5)">
+                                <div class="function-titles-main">
+                                    <span class="function-titles-main-text active">海量图标</span>
+                                    <img class="function-titles-main-arrow active" src="/albb666/shouye/imgs/arrow.png" width="28"></img>
+                                </div>
+                                <div class="intro-text active">千万矢量图标素材，轻松搜索，供您使用，满足界面设计、平面设计、PPT制作等场景</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="function-titles" onclick="introTab(this,6)">
+                                <div class="function-titles-main">
+                                    <span class="function-titles-main-text">矢量插画</span>
+                                    <img class="function-titles-main-arrow" src="/albb666/shouye/imgs/arrow.png" width="28"></img>
+                                </div>
+                                <div class="intro-text">丰富精美矢量插画资源，支持png、svg格式下载，满足不同场景的需求</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="function-titles" onclick="introTab(this,7)">
+                                <div class="function-titles-main">
+                                    <span class="function-titles-main-text">3D 插画</span>
+                                    <img class="function-titles-main-arrow" src="/albb666/shouye/imgs/arrow.png" width="28"></img>
+                                </div>
+                                <div class="intro-text">可不同角度立体动态呈现的3D模型，支持在线背景色彩搭配、视角调整</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="function-titles" onclick="introTab(this,8)">
+                                <div class="function-titles-main">
+                                    <span class="function-titles-main-text">Lottie 动效</span>
+                                    <img class="function-titles-main-arrow" src="/albb666/shouye/imgs/arrow.png" width="28"></img>
+                                </div>
+                                <div class="intro-text">Lottie 动态素材，创意点亮动态之美，生动的特效素材创意展现</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="function-titles" onclick="introTab(this,9)">
+                                <div class="function-titles-main">
+                                    <span class="function-titles-main-text">免费商用字体</span>
+                                    <img class="function-titles-main-arrow" src="/albb666/shouye/imgs/arrow.png" width="28"></img>
+                                </div>
+                                <div class="intro-text">阿里妈妈·智造字，多款商用免费字体，支持在线预览、可变轴调节、一键代码引用
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="intro-content-right">
+                    <img class="intro-img active" src="/albb666/shouye/imgs/sucai/sucai1.jpeg" width="550"></img>
+                    <img class="intro-img" src="/albb666/shouye/imgs/sucai/sucai2.jpeg" width="670"></img>
+                    <img class="intro-img" src="/albb666/shouye/imgs/sucai/sucai3.jpeg" width="550"></img>
+                    <img class="intro-img" src="/albb666/shouye/imgs/sucai/sucai4.jpeg" width="670"></img>
+                    <img class="intro-img" src="/albb666/shouye/imgs/sucai/sucai5.jpeg" width="670"></img>
+                 </div>
+
+        </div>
+
+
+        <div class="END"><p>- END -</p></div>
+
+        </div>
+
+    </div>
+
+     <div id="bottom">
+        <div class="bottom-content">
+            <div class="bottom-content-left">
+                <span class="bottom-logo"><img src="/albb666/shouye/imgs/icon1.png" alt="网站logo图片" width="115"></span>
+                <div class="text-content">
+                    <p>阿里妈妈MUX倾力打造的矢量图标管理、交流平台。</p>
+                    <p>设计师将图标上传到 iconfont 平台，用户可以自定义下载多种格式的icon，平台也可将图标转换为字体，便于前端工程师自由调整与调用。</p>
+                </div>
+
+                <p>©ALIMAMA MUX, powered by alimama THX.</p>
+                <p>转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，商业媒体及纸媒请先联系：iconfont@list.alibaba-inc.com</p>
+
+                <div class="text-content2">
+                    <a href="https://terms.alicdn.com/legal-agreement/terms/platform_service/20220704165734807/20220704165734807.html?spm=a313x.home_2025.i7.1.58a33a81ObLht5s" target="_blank"><p>服务协议</p></a>
+                    <a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_ali_mama_division/suit_bu1_ali_mama_division202108270850_24757.html?spm=a313x.home_2025.i7.2.58a33a81ObLht5" target="_blank"><p>隐私政策</p></a>
+                    <a href="https://beian.miit.gov.cn/?spm=a313x.home_2025.i7.3.58a33a81ObLht5#/Integrated/index" target="_blank"><p>浙ICP备 2022000356号-3</p></a>
+                    <img src="/albb666/shouye/imgs/jings/jing.jpeg" width="20">
+                    <img src="/albb666/shouye/imgs/jings/jing1.jpeg" width="20">
+                    <a href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank"><p>浙公网安备 33011002011859号</p></a>
+                </div>
+            </div>
+
+
+            <div class="bottom-content-right">
+                <div><p style="font-size: 20px;">友情链接</p></div>
+                <div class="hidden"><img class="bottom-hidden-img" src="/albb666/shouye/imgs/erweima.png" width="200"></div>
+                <div class="youqinglianjie">
+                    <a href="https://www.wanxiang.art/?spm=a313x.home_2025.i7.6.58a33a816Eai72" target="_blank"><p>万象营造</p></a>
+                    <a href="https://thx.github.io/?spm=a313x.home_2025.i7.7.58a33a816Eai72" target="_blank"><p>THX</p></a>
+                    <a href="https://chuangyi.taobao.com/?spm=a313x.home_2025.i7.8.58a33a816Eai72" target="_blank"><p>阿里妈妈创意中心</p></a>
+                    <a href="https://mux.alimama.com/?spm=a313x.home_2025.i7.9.58a33a816Eai72" target="_blank"><p>阿里妈妈 MUX</p></a>
+                    <a href="https://www.alibabaued.com/background/fronthome/index.htm?spm=a313x.home_2025.i7.10.58a33a816Eai72" target="_blank"><p>阿里巴巴 UED 官网</p></a>
+                    <a href="https://www.uisdc.com/?spm=a313x.home_2025.i7.11.58a33a816Eai72" target="_blank"><p>优设网</p></a>
+                    <a href="https://uiiiuiii.com/?spm=a313x.home_2025.i7.12.58a33a816Eai72" target="_blank"><p>优优教程网</p></a>
+                    <a href="https://www.bootcss.com/?spm=a313x.home_2025.i7.13.58a33a816Eai72" target="_blank"><p>Bootstrap 中文网</p></a>
+                    <a href="https://branding.tmall.com/?spm=a313x.home_2025.i7.14.58a33a816Eai72" target="_blank"><p>天猫 Tmall Design</p></a>
+                    <a href="https://www.ui.cn/?spm=a313x.home_2025.i7.15.58a33a816Eai72" target="_blank"><p>UI 中国</p></a>
+                    <a href="https://ics.alibaba.com/project/Hn8mXx?spm=a313x.home_2025.i7.16.58a33a816Eai72" target="_blank"><p>Alibaba ICS Design</p></a>
+                    <a href="https://www.teambition.com/?spm=a313x.home_2025.i7.17.58a33a816Eai72&utm_source=iconfont&utm_content=footer" target="_blank"><p>Teambition</p></a>
+                    <a href="https://www.yuque.com/?spm=a313x.home_2025.i7.18.58a33a816Eai72" target="_blank"><p>语雀</p></a>
+                    <a href="https://www.imgcook.com/?spm=a313x.home_2025.i7.19.58a33a816Eai72" target="_blank"><p>imgcook</p></a>
+                </div>
+
+                <div class="dibutubiao">
+                    <a href="https://weibo.com/u/3541697272?spm=a313x.home_2025.i7.20.58a33a816Eai72"><img src="/albb666/shouye/imgs/denglufangshi/微博.png" width="30"></a>
+                    <a class="wechat-hover"><img src="/albb666/shouye/imgs/denglufangshi/微信.png" width="33"></a>
+                    <a href="mailto:iconfont@list.alibaba-inc.com"><img src="/albb666/shouye/imgs/denglufangshi/邮件.png" width="30"></a>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <script src="main.js"></script>
+
 </body>
 </html>

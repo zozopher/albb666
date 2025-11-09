@@ -1,0 +1,381 @@
+
+.header-container{
+    width: 100%;
+    max-width: 1440px;
+    padding: 0;
+    margin: 0 auto; /*水平居中*/
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;         /* 继承父元素颜色 */
+}
+
+input{
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.header-search-box{
+    width: 170px;
+    height: 32px;
+    line-height: 30px;
+    font-size: 14px;
+    display: inline-flex;
+    border: #eaeaea88 1px solid;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.header-search-box:hover{
+    border: #eaeaea 1px solid;
+}
+
+.header-search-box:focus-within{ /*':focus-within'可以使任何子元素获得焦点时，父元素改变*/
+    border: #eaeaea 1px solid;
+}
+
+.header-fenlei{
+    width: 58px;
+    margin-left: 1px;
+    background-color: rgba(133, 134, 156, .3);
+    border-radius: 16px 0 0 16px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.header-sousuo{
+    display: flex;
+    align-items: center;
+}
+
+.header-sousuo input{
+    width: 75px;
+    margin-left: 5px;
+    color: white;
+}
+
+.content-container{
+    background-color: white;
+    width: 100%;
+    position: relative;
+}
+
+.box.two{
+        background-color: #FFFFFF1A;
+    }
+
+.author-infor-container{
+    height: 170px;
+    background-color: #1E1E1E;
+    display: flex;
+    justify-content: center;
+}
+
+.author-infor-left{
+    display: flex;
+    align-items: center;
+}
+
+.author-infor-right{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.infor-title{
+    padding-top: 34px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.label1{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 21px;
+    background-color: #99c84a;
+    border-radius: 999px;
+    font-size: 13px;
+}
+
+.label2{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 21px;
+    background-color: #6272D6;
+    border-radius: 999px;
+    font-size: 13px;
+}
+
+.label3{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 21px;
+    background-color: #FF8D17;
+    border-radius: 999px;
+    font-size: 13px;
+}
+
+.infor-content-text{
+    width: 1060px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.infor-content-text span{
+    font-size: 13px;
+    color: #A6A5AD;
+}
+
+.side-buttons{
+    visibility: hidden;
+}
+
+.interact-list.top{
+    position: absolute;
+    left: 50%;
+    margin-left: 390px;
+    margin-top: 140px;
+    gap: 15px;
+}
+
+.radius-btn.sousuo{
+    position: relative;
+}
+
+.inter-icon.sousuo{
+    z-index: 10;
+}
+
+.search-float{
+    visibility: hidden;
+    width: 200px;
+    height: 55px;
+    padding-right: 0px;
+    border-radius: 30px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    background: center center #4A54FF;
+    background-image: linear-gradient(315deg, #6772FF 0, #00F9E5 100%);
+    background-size: 104%;
+}
+
+.sousuo-box{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.sousuo-box input{
+    font-size: 18px;
+    width: 125px;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.sousuo-box input::placeholder{
+    color: #ffffffc6;
+}
+
+.main-body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-list-container{
+    width: 1320px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon-list{
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 25px;
+}
+
+.icon{
+    position: relative;
+}
+
+.icon img{
+    width: 38px;
+}
+
+.icon-container{
+    width: 120px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    color: #666666;
+    font-size: 15px;
+}
+
+.icon-cover{
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13,10,49,.9);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cover-function-icon{
+    width: 100%;
+    padding: 7px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-function-icon:hover{
+    background-color: rgba(13, 10, 49, 0.954);
+}
+
+.cover-function-icon.active svg path{
+    fill: #00F9E5 !important;
+    stroke: #00F9E5 !important;
+}
+
+.thanks{
+    width: 100%;
+    height: 60px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.thanks-text{
+    width: 500px;
+    color: #777;
+    font-size: 14px;
+    position: relative;
+    padding: 0 400px;
+    text-align: center;
+}
+
+.thanks-text::before{
+    content: '';
+    display: block;
+    width: 440px;
+    height: 1px;
+    background: #eaeaea;
+    margin: 0 20px;
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+
+.thanks-text::after{
+    content: '';
+    display: block;
+    width: 440px;
+    height: 1px;
+    background: #eaeaea;
+    margin: 0 20px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+
+.interact-list{
+    margin-bottom: 10px;
+    display: flex;
+    gap: 35px;
+}
+
+.radius-btn{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: center center #4A54FF;
+    background-image: linear-gradient(315deg, #6772FF 0, #00F9E5 100%);
+    background-size: 104%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radius-btn.itr .filled{
+    display: none;
+}
+
+.radius-btn.itr.active .empty{
+    display: none;
+}
+
+.radius-btn.itr.active .filled{
+    display: block;
+}
+
+.radius-btn.share{
+    position: relative;
+}
+
+.inter-icon.share{
+    z-index: 10;
+}
+
+.hover-float{
+    visibility: hidden;
+    width: 55px;
+    height: 150px;
+    padding-top: 65px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    gap: 20px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: center center #4A54FF;
+    background-image: linear-gradient(315deg, #6772FF 0, #00F9E5 100%);
+    background-size: 104%;
+}
+
+.text-intro{
+    width: 100%;
+    color: #999;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 63px;
+    padding-bottom: 200px;
+}
