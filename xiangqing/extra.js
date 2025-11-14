@@ -29,27 +29,27 @@ document.querySelectorAll('.radius-btn.itr').forEach(function(btn) {
 });
 
 
-/* 分享条悬停显示效果 */
+/* 分享条及搜索条悬停弹出效果 */
 document.querySelector('.radius-btn.share.top').addEventListener('mouseenter',function() {
-    document.querySelector('.hover-float.top').style.visibility = 'visible';
+    document.querySelector('.hover-float.top').classList.add('active');
 })
 document.querySelector('.radius-btn.share.top').addEventListener('mouseleave',function() {
-    document.querySelector('.hover-float.top').style.visibility = 'hidden';
+    document.querySelector('.hover-float.top').classList.remove('active');
 })
 
 document.querySelector('.radius-btn.share.bot').addEventListener('mouseenter',function() {
-    document.querySelector('.hover-float.bot').style.visibility = 'visible';
+    document.querySelector('.hover-float.bot').classList.add('active');
 })
 document.querySelector('.radius-btn.share.bot').addEventListener('mouseleave',function() {
-    document.querySelector('.hover-float.bot').style.visibility = 'hidden';
+    document.querySelector('.hover-float.bot').classList.remove('active');
 })
 
 
 document.querySelector('.radius-btn.sousuo').addEventListener('mouseenter',function() {
-    document.querySelector('.search-float').style.visibility = 'visible';
+    document.querySelector('.search-float').classList.add('active');
 })
 document.querySelector('.radius-btn.sousuo').addEventListener('mouseleave',function() {
-    document.querySelector('.search-float').style.visibility = 'hidden';
+    document.querySelector('.search-float').classList.remove('active');
 })
 
 

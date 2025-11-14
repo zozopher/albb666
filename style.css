@@ -11,195 +11,25 @@
     body{
         padding: 0;
         margin: 0;
+        overflow-x: hidden;
     }
 
     body.no-scroll{
         overflow: hidden;
     }
 
-    
-    #container{
-        width: 100%;
-        max-width: 1440px;
-        padding: 0;
-        margin: 0 auto; /*水平居中*/
-        overflow-x: hidden;
-    }
-
-    .bg-img-container{
-        position: absolute;
-        z-index: -1000;
-        display: flex;
-    }
-
-    .header-container{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 60px;
-        background-color: black;
-        position: relative;
-        z-index: 92;
-    }
-
-    .header-saver{
-        z-index: 91;
-        position: absolute;
-        width: 100%;
-        height: 60px;
-        background-color: black;
-    }
-
-    .header{
-        width: 1440px;
-        display: flex;
-        align-items: center; /* 垂直居中 */
-        height: 40px;
-        justify-content: space-between; /* 左右分开 */
-    }
-
-    .left{
-        display: flex; /*灵活可动*/
-        align-items: center; /* 垂直居中 */
-        gap: 50px; /*图标与功能按钮间的距离*/
-        cursor: default;
-    }
-
-    .header-box1{
-        display: flex;
-        gap: 5px;
-    }
-
-    .box{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px;  /*圆角*/
-        cursor: pointer; /*光标切换为可点击形态*/
-    }
-
-    .box.one{
-        height: 30px;
-        width: 65px;
-    }
-
-    .box.two{
-        height: 30px;
-        width: 80px;
-    }
-
-    .box.three{
-        height: 30px;
-        width: 98px;
-    }
-
-    .box.four{
-        height: 30px;
-        width: 70px;
-    }
-
-    .box.five{
-        height: 30px;
-        width: 130px;
-    }
-
-    .box.six{
-        height: 30px;
-        width: 70px;
-    }
-
-    .box-text{
-        font-weight: bold;
-        background: linear-gradient(to right, #92ff9d, #2580ee);
-        background-clip: text;
-        -webkit-background-clip: text;  /*将背景裁剪到文字区域*/
-        -webkit-text-fill-color: transparent;  /*使文字颜色透明，显示背景渐变*/
-    }
-
-    .box:hover{
-        background-color: #FFFFFF1A;
-    }
-
-    .right{
-        margin: 0;
-        display: flex; /*灵活可动*/
-        align-items: center; /* 垂直居中 */
-        justify-content: end;
-    }
-
-    .right-list{
-        margin: 0;
-    }
-
-    ul{
-        list-style: none; /* 移除实心圆点 */
-        display: flex;
-        flex-wrap: nowrap; /*不换行*/
-    }
-
-    .li1{
-        display: flex;
-        align-items: center;
-        margin-right: 25px; /*项间距*/
-        cursor: pointer; /*光标切换为可点击形态*/
-    }
-
-    .li1-icon:hover{
-        filter: brightness(0) invert(1);  /*前者将图标变黑，后者将黑色反转变为纯白*/
-    }
-
-    .title{
-        text-align: center;
-        padding: 45px 0px 0px ;
-    }
-
-    .side-column{
-        position: fixed;
-        left: 50%;
-        margin-left: 720px;
-        top: 260px ;
-    }
-
-    .fankui{
-        cursor: pointer; /*光标切换为可点击形态*/
-    }
-
-    .side-buttons{
-        display: flex;
-        flex-direction: column;
-        padding-top: 25px;
-        gap: 25px;
-    }
-
-    .side-btn{
-        display: flex;
-        height: 52px;
-        width: 53px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        background-color: #bfbfbf78;
-        cursor: pointer; /*光标切换为可点击形态*/
-        visibility: hidden;
-    }
-
-    .side-btn-icon{
-        filter: brightness(0);
-    }
-
-    .side-btn:hover{
-        background-color: #bfbfbfec;
-    }
-
-    .side-btn.show{
-        visibility: visible;
+    .page-saver{
+        transform: scale(0.909);
+        transform-origin: top left;
+        width: 110vw;
+        height: calc(100vh / 0.909);
     }
 
     .shoppingcar{
         width: 320px;
         height: 100%;
         position: fixed;
-        z-index: 99;
+        z-index: 99999;
         right: -320px;
         background-color: #f3f3f3;
         overflow: hidden;
@@ -291,6 +121,11 @@
         background-image: linear-gradient(315deg, #6772FF 0, #00F9E5 100%);
         background-size: 104% 104%;
         border-radius: 40px;
+        cursor: not-allowed;
+    }
+
+    .car-b-2:hover{
+        background: #ddd;
     }
 
     #car-wrapper{
@@ -301,6 +136,428 @@
         background-color: #0d0a31;
         opacity: 0.9;
         visibility: hidden;
+    }
+
+    #container{
+        width: 100%;
+        max-width: 1440px;
+        padding: 0;
+        margin: 0 auto; /*水平居中*/
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .bg-img-container{
+        position: absolute;
+        z-index: -1000;
+        display: flex;
+        left: 0px;
+        top: 0;
+    }
+
+    .header-container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        background-color: black;
+        position: relative;
+        z-index: 92;
+    }
+
+    .header-saver{
+        z-index: 91;
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        background-color: black;
+    }
+
+    .header{
+        width: 1440px;
+        display: flex;
+        align-items: center; /* 垂直居中 */
+        height: 40px;
+        justify-content: space-between; /* 左右分开 */
+    }
+
+    .left{
+        display: flex; /*灵活可动*/
+        align-items: center; /* 垂直居中 */
+        gap: 50px; /*图标与功能按钮间的距离*/
+        cursor: default;
+    }
+
+    .header-box1{
+        display: flex;
+        gap: 5px;
+    }
+
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border-radius: 20px;  /*圆角*/
+        cursor: pointer; /*光标切换为可点击形态*/
+    }
+
+    .box.one{
+        height: 30px;
+        width: 65px;
+    }
+
+    .box.two{
+        height: 30px;
+        width: 80px;
+        cursor: default;
+    }
+
+    .box.three{
+        height: 30px;
+        width: 98px;
+    }
+
+    .box.four{
+        height: 30px;
+        width: 70px;
+    }
+
+    .box.five{
+        height: 30px;
+        width: 130px;
+    }
+
+    .box.six{
+        height: 30px;
+        width: 70px;
+    }
+
+    .box-text{
+        font-weight: bold;
+        background: linear-gradient(to right, #92ff9d, #2580ee);
+        background-clip: text;
+        -webkit-background-clip: text;  /*将背景裁剪到文字区域*/
+        -webkit-text-fill-color: transparent;  /*使文字颜色透明，显示背景渐变*/
+    }
+
+    .box:hover{
+        background-color: #FFFFFF1A !important;
+    }
+
+    .right{
+        margin: 0;
+        display: flex; /*灵活可动*/
+        align-items: center; /* 垂直居中 */
+        justify-content: end;
+    }
+
+    .right-list{
+        margin: 0;
+    }
+
+    ul{
+        list-style: none; /* 移除实心圆点 */
+        display: flex;
+        flex-wrap: nowrap; /*不换行*/
+    }
+
+    .li1{
+        display: flex;
+        align-items: center;
+        margin-right: 25px; /*项间距*/
+        cursor: pointer; /*光标切换为可点击形态*/
+    }
+
+    .li1-icon:hover{
+        filter: brightness(0) invert(1);  /*前者将图标变黑，后者将黑色反转变为纯白*/
+    }
+
+    .title{
+        text-align: center;
+        padding: 45px 0px 0px ;
+    }
+
+    .sucaiku{
+        display: none;
+        width: 955px;
+        height: 430px;
+        background-color: #1E1E1E;
+        border-radius: 6px 6px 4px 4px;
+        box-shadow: 0 0 3px 0 #4A54FF;
+        position: absolute;
+        left: 90px;
+        top: 58px;
+        z-index: 9999;
+    }
+
+    .sucaiku-list{
+        padding: 0;
+        margin-top: 5px;
+    }
+    
+    .sucaiku-li{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-ku{
+        padding: 0 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .main-ku:hover{
+        background-color: black;
+    }
+    
+    .main-ku div{
+        font-size: 18px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+
+    .main-ku img{
+        border-radius: 8px;
+    }
+
+    .sub-ku{
+        height:40px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        cursor: pointer;
+    }
+
+    .sub-ku:hover{
+        background-color: black;
+    }
+
+    .box.two:hover + .sucaiku,.sucaiku:hover{
+        display: block;
+    }
+
+    .sucaiku::before{
+        content: '';
+        width: 100px;
+        height: 20px;
+        position: absolute;
+        background-color: transparent;
+        top: -20px;
+        left: 165px;
+    }
+
+    .ziyuanguanli{
+        display: none;
+        width: 140px;
+        height: 320px;
+        background-color: #1E1E1E;
+        border-radius: 6px 6px 4px 4px;
+        box-shadow: 0 0 3px 0 #4A54FF;
+        position: absolute;
+        left: 325px;
+        top: 58px;
+        z-index: 9999;
+        cursor: pointer;
+    }
+
+    .ziyuan{
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        color: #ffffffda;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ziyuan:first-child{
+        border-radius: 6px 6px 0 0;
+    }
+
+    .ziyuan:last-child{
+        border-radius: 0 0 4px 4px;
+    }
+
+    .ziyuan:hover{
+        background: center center #4A54FF;
+        background-image: linear-gradient(315deg, #6772FF 0, #00F9E5 100%);
+        background-size: 104%;
+    }
+
+    .ziyuanguanli::before{
+        content: '';
+        width: 125px;
+        height: 20px;
+        position: absolute;
+        background-color: transparent;
+        top: -20px;
+        left: 8px;
+    }
+
+    .box.three:hover + .ziyuanguanli,.ziyuanguanli:hover{
+        display: block;
+    }
+
+    .aigongju{
+        display: none;
+        width: 760px;
+        height: 430px;
+        background-color: #1E1E1E;
+        border-radius: 6px 6px 4px 4px;
+        box-shadow: 0 0 3px 0 #4A54FF;
+        position: absolute;
+        left: 350px;
+        top: 58px;
+        z-index: 9999;
+    }
+
+    .aicard-list{
+        margin: 5px 25px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .aicard{
+        width: 170px;
+        height: 350px;
+    }
+
+    .aicard-main{
+        height: 50px;
+        font-size: large;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .aicard-main::after{
+        content: '';
+        width: 130px;
+        height: 1px;
+        background: #eaeaea25;
+        position: absolute;
+        bottom: 1px;
+    }
+
+    .aicard-sub{
+        height: 40px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #B0B0B0;
+        cursor: pointer;
+    }
+
+    .aicard-sub:hover{
+        color: white;
+    }
+
+    .aigongju-all{
+        height: 50px;
+        margin-top: 25px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .aigongju-all::before{
+        content: '';
+        width: 710px;
+        height: 1px;
+        background: #eaeaea25;
+        position: absolute;
+        top: 1px;
+        left: 20px;
+    }
+
+    .aigongju::before{
+        content: '';
+        width: 125px;
+        height: 20px;
+        position: absolute;
+        background-color: transparent;
+        top: -20px;
+        left: 180px;
+    }
+
+    .box.five:hover + .aigongju,.aigongju:hover{
+        display: block;
+    }
+
+    .bangzhu{
+        display: none;
+        width: 140px;
+        height: 240px;
+        background-color: #1E1E1E;
+        border-radius: 6px 6px 4px 4px;
+        box-shadow: 0 0 3px 0 #4A54FF;
+        position: absolute;
+        left: 625px;
+        top: 58px;
+        z-index: 9999;
+        cursor: pointer;
+    }
+
+    .bangzhu::before{
+        content: '';
+        width: 90px;
+        height: 20px;
+        position: absolute;
+        background-color: transparent;
+        top: -20px;
+        left: 30px;
+    }
+
+    .box.six:hover + .bangzhu,.bangzhu:hover{
+        display: block;
+    }
+
+    .side-column{
+        position: fixed;
+        left: 50%;
+        margin-left: 665px;
+        top: 260px ;
+        z-index: 99;
+    }
+
+    .fankui{
+        cursor: pointer; /*光标切换为可点击形态*/
+    }
+
+    .side-buttons{
+        display: flex;
+        flex-direction: column;
+        padding-top: 25px;
+        gap: 25px;
+    }
+
+    .side-btn{
+        display: flex;
+        height: 52px;
+        width: 53px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #bfbfbf78;
+        cursor: pointer; /*光标切换为可点击形态*/
+        visibility: hidden;
+    }
+
+    .side-btn-icon{
+        filter: brightness(0);
+    }
+
+    .side-btn:hover{
+        background-color: #bfbfbfec;
+    }
+
+    .side-btn.show{
+        visibility: visible;
     }
 
     .search-container{
@@ -573,8 +830,8 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 40%; /* 控制渐变高度 */
-        background: linear-gradient(to top,  rgba(0, 0, 0, 0.6) 0%,  rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+        height: 50%; /* 控制渐变高度 */
+        background: linear-gradient(to top,  rgba(0, 0, 0, 0.5) 0%,  rgba(0, 0, 0, 0.3) 50%, transparent 100%);
         pointer-events: none; /* 允许接收对视频的鼠标事件 */
     }
 
@@ -588,6 +845,14 @@
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
         z-index: 10;
         pointer-events: auto; /* 允许文字区域交互 */
+    }
+
+    .start-trying{
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        display: none;
+        text-align: center;
     }
 
     .GENGDUOAI{
@@ -623,6 +888,7 @@
         height: 170px;
         background-color: aliceblue;
         border-radius: 20px;  /*圆角*/
+        cursor: pointer;
     }
 
     .zuixinxiaoxi-samples img{
@@ -721,7 +987,7 @@
 
     .function-titles-main-text.active{
         font-size: 23px;
-        font-weight: bold;
+        font-weight: bold;  /*加粗*/
         background: linear-gradient(to right, #92ff9d, #2580ee);
         background-clip: text;
         -webkit-background-clip: text;  /*将背景裁剪到文字区域*/
@@ -759,6 +1025,165 @@
 
     .intro-img.active{
         display: block;
+    }
+
+    .sucai-title-list{
+        margin-top: 40px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .sucai-sub{
+        height: 36px;
+        width: 110px;
+        background-color: #ada5a542;
+        color: #fff;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        cursor: pointer;
+    }
+
+    .sucai-sub.active{
+        font-weight: bold;  /*加粗*/
+        font-size: 16px;
+        background: linear-gradient(to right, #92ff9d, #2580ee);
+        -webkit-background-clip: text;  /*将背景裁剪到文字区域*/
+        background-clip: text;
+        -webkit-text-fill-color: transparent;  /*使文字颜色透明，显示背景渐变*/
+        border: 1px solid #5ebfc69a;
+    }
+
+    .sucaiimg-container{
+        display: none;
+        width: 100%;
+        margin-top: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .sucaiimg-container.active{
+        display: block;
+    }
+
+    .sucaiimg.small{
+        float: left;
+        width: 270px;
+        height: 340px;
+        background-color: white;
+        margin: 9px;
+        border-radius: 20px;  /*圆角*/
+        display: flex;
+        align-items: center;
+    }
+
+    .sucaiimg{
+        float: left;
+        width: 270px;
+        margin: 9px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .author-infor{
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .avator{
+        width: 30px !important;
+    }
+
+    .user-name{
+        display: inline-flex;
+        gap: 60px;
+    }
+
+    .fugai-content{
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .fugai.sucai{
+        height: 100%;
+        background: linear-gradient(to top,  rgba(0, 0, 0, 0.3) 0%,  transparent 100%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .fugai.active{
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        pointer-events: auto;
+    }
+
+    .interact-btns{
+        padding-left: 20px;
+        display: none;
+        gap: 28px;
+    }
+
+    .interact-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        background-color: #5150509a;
+        width: 100px;
+        height: 35px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .icon{
+        display: none;
+    }
+
+    .icon.active{
+        display: block;
+    }
+
+    .sucaiimg img{
+        width: 100%;      /* 填充容器宽度 */
+        height: auto;     /* 保持比例 */
+        border-radius: 20px;  /*圆角*/
+    }
+
+    .sucaiimg video{
+        width: 100%;      /* 填充容器宽度 */
+        height: auto;     /* 保持比例 */
+        border-radius: 20px;  /*圆角*/
+    }
+
+    .cancel{
+        position: fixed;
+        top: 100px;
+        left: 45%;
+        width: 160px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #F7F4F0;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .cancel.show{
+        opacity: 1;
+    }
+
+    .cancel.out{
+        opacity: 0;
+    }
+
+    .cancel-text{
+        color: #FF8800;
+        font-size: large;
     }
 
     .END{
